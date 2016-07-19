@@ -38,14 +38,14 @@ PACKAGE_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo Uninstalling Watson IoT Platform Package \
 
 
-$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH" iot/create_device_type
+$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH" /whisk.system/iot/create_device_type
 
-$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH" iot/delete_device_type
+$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH" /whisk.system/iot/delete_device_type
 
-$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH"  iot/register_device
+$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH"  /whisk.system/iot/register_device
 
-$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH" iot/delete_device
+$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH" /whisk.system/iot/delete_device
 
-$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH" iot/send_event
+$WSK_CLI --apihost "$APIHOST" action delete --auth "$AUTH" /whisk.system/iot/send_event
 
-$WSK_CLI --apihost "$APIHOST" package delete --auth "$AUTH" iot
+$WSK_CLI --apihost "$APIHOST" package delete --auth "$AUTH" /whisk.system/iot
